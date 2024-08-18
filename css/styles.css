@@ -1,36 +1,39 @@
-/* === Fontes === */
+/* === Fontes, Base de estilos === */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
-/* === Corpo principal === */
-.container{
+*{
     color: #fff;
     background-color: #2B2D31;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     font-family: "Inter";
     font-size: 12px;
     border: 1px;
 }
-.text{
-    text-align: center;  
+
+
+/* === Corpo principal === */
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
+/* === Menu === */
 .logo{
     margin-top: 5%;
 }
+
+/* === Tipografia === */
+.text{
+    text-align: center;  
+}
 .title{
-    font-size: 16px;
-    width: 100%;
-    text-align: end;
-    margin-top: 10%; 
+    margin-top: 1%;
+    align-items: end;
+
 }
-hr{
-    width: 100%;
-    margin-top: 0px;
-    background-color: #3C4043;
-}
+
+/* === Alertas === */
 .alert01{
     color: #1D46CA;
 }
@@ -38,16 +41,32 @@ hr{
     color: #989898;
     font-size: 10px;
 }
+
+/* === Imagens e Botões */
 .teste{
     width: Fixed (622px)px;
-height: Fixed (79px)px;
-padding: 5px;
-gap: 4px;
-border-radius: 8px 0px 0px 0px;
-border: 2px 0px 0px 0px;
-opacity: 0px;
-
+    height: Fixed (79px)px;
+    padding: 5px;
+    gap: 4px;
+    border-radius: 8px 0px 0px 0px;
+    border: 2px 0px 0px 0px;
+    opacity: 0px;
 }
+
+/* === Tags === */
+hr{
+    width: 100%;
+    margin-top: 0px;
+    background-color: white;
+    color: white;
+    padding: 5px;
+    border: 1px solid #3C4043
+}
+h1{
+    font-size: 18px;
+}
+
+
 
 
 
