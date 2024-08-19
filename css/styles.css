@@ -21,49 +21,44 @@
 /* === Menu === */
 .logo{
     margin-top: 5%;
+    margin-left: 4%;
 }
 
 /* === Tipografia === */
 .text{
     text-align: center;  
 }
-.title{
-    margin-top: 1%;
-    align-items: end;
-
+.space{
+    margin-top: 5%;
 }
 
 /* === Alertas === */
 .alert01{
-    color: #1D46CA;
+    color: #989898;
+    font-weight: bolder;
 }
 .alert02{
     color: #989898;
     font-size: 10px;
+    font-weight: bolder;
 }
 
 /* === Imagens e Botões */
 .teste{
-    width: Fixed (622px)px;
-    height: Fixed (79px)px;
-    padding: 5px;
-    gap: 4px;
-    border-radius: 8px 0px 0px 0px;
-    border: 2px 0px 0px 0px;
-    opacity: 0px;
+    width: 80%;
+    border-radius: 3px;
+}
+.teste:hover {
+    background-color: rgba(255, 255, 255, 0.178); /* Cor do fundo ao passar o mouse */
 }
 
 /* === Tags === */
 hr{
-    width: 100%;
-    margin-top: 0px;
-    background-color: white;
-    color: white;
-    padding: 5px;
-    border: 1px solid #3C4043
+    margin-top: 5px;
+    border: 1px solid #989898;
 }
 h1{
-    font-size: 18px;
+    font-size: 14px;
 }
 
 

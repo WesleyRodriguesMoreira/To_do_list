@@ -8,34 +8,46 @@
     
     <title>To-do List</title>
 </head>
-<body>
+<body class="container">
 
     <!--=== Logo ===-->
-    <header class="container">
+    <header>
         <figure>
             <img class="logo" src="../assets/img/Logo.svg" alt="Logo do Projeto">
             <figcaption class="text">Sistema de Geração de Tarefas.</figcaption>
         </figure>
     </header>
-    <div class="title">
-        <h1>Tarefas</h1>
-        <hr>
-    </div>
-    <!--=== Estrutura da página ===-->
-    <main class="container">
 
-        
+   
+    <!--=== Estrutura da página ===-->
+    <main>
+
+        <!-- Título -->
+        <div class="space">
+            <h1>Tarefas</h1>
+            <hr>
+        </div>
 
         <!-- Paragrafo para quando não tiver Tarefas -->
-        <div>
+        <div class="space" id="task">
             <p class="text">
                 Você ainda não criou nenhuma <span class="alert01">Tarefa</span>!<br>
                 <span class="alert02">Não se preocupe, suas novas tarefas irão aparece aqui.</span>
             </p>
         </div>
 
-        <div>
-            <button class="button"><img class="teste" src="../assets/img/botão.svg" alt=""></button>
+        <!-- Tarefas -->
+         <div class="space">
+            <input type="checkbox" id="task-completed">
+            <span id="task-name">Nome da tarefa</span>
+            <span id="task-description">Descrição do teste</span>
+            <button id="taks-edit"><span>Editar</span></button>
+            <button id="taks-del"><span>Excluir</span></button>
+            <hr>
+         </div>
+
+        <div class="space">
+            <button class="button" id="task-cad"><img class="teste" src="../assets/img/botão.svg" alt="Nova tarefa"></button>
         </div>
     </main>
 
@@ -48,4 +60,5 @@
 
 <!--=== Link para o script/js ===-->
 <script src="../js/app.js"></script>
+<script src="https://kit.fontawesome.com/42f81b3d44.js" crossorigin="anonymous"></script>
 </html>
