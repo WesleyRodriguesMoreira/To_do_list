@@ -5,25 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--=== Links de Estilos ===-->
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
     
     <title>To-do List</title>
 </head>
-<body class="container">
+<body>
 
-    <!--=== Logo ===-->
-    <header>
+    <!--=== Menu ===-->
+    <header class="container">
         <figure>
             <img class="logo" src="../assets/img/Logo.svg" alt="Logo do Projeto">
-            <figcaption class="text">Sistema de Geração de Tarefas.</figcaption>
+            <!-- <figcaption class="text">Sistema de Geração de Tarefas.</figcaption> -->
         </figure>
     </header>
 
    
     <!--=== Estrutura da página ===-->
-    <main>
-
+    <main class="container">
         <!-- Título -->
-        <div class="space">
+        <div class="title">
             <h1>Tarefas</h1>
             <hr>
         </div>
@@ -37,24 +37,70 @@
         </div>
 
         <!-- Tarefas -->
-         <div class="space">
+         <!-- <div class="space">
             <input type="checkbox" id="task-completed">
             <span id="task-name">Nome da tarefa</span>
             <span id="task-description">Descrição do teste</span>
             <button id="taks-edit"><span>Editar</span></button>
             <button id="taks-del"><span>Excluir</span></button>
             <hr>
-         </div>
+         </div> -->
 
         <div class="space">
-            <button class="button" id="task-cad"><img class="teste" src="../assets/img/botão.svg" alt="Nova tarefa"></button>
+            <button id="task-cad"><img class="button" src="../assets/img/botão.svg" alt="Nova tarefa"></button>
         </div>
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- === Sidebar de Cadastro === -->
+        <div class="sidebar space">
+            <p class="alert03">Salvar</p>
+            <span class="alert03">Formulário</span>
+            <form class="sidebar-form">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" required>
+
+                <label for="descricao">Descrição (Opcional):</label>
+                <textarea id="descricao" name="descricao" required></textarea>
+
+                <button type="submit">Fecha</button>
+                <button type="submit">Salvar Mudanças</button>
+            </form>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </main>
 
+    
+
+    <!-- === Sidebar de Edição === -->
+
     <!--=== Rodapé da página ===-->
-    <footer class="container">
+    <!-- <footer class="container">
         <p>&copy; 2024 Meu Site. Todos os direitos reservados.</p>
-    </footer>
+    </footer> -->
     
 </body>
 
