@@ -22,74 +22,57 @@
    
     <!--=== Estrutura da página ===-->
     <main class="container">
-        <!-- Título -->
-        <div class="title">
-            <h1>Tarefas</h1>
-            <hr>
+        <div class="task-crud">
+    
+            <!-- Título -->
+             <div>
+                <h1>Tarefas</h1>
+                <hr>
+            </div>
+        
+
+            <!-- Paragrafo para quando não tiver Tarefas -->
+            <div class="space" id="task-p">
+                <p class="text">
+                    Você ainda não criou nenhuma <span class="alert01">Tarefa</span>!<br>
+                    <span class="alert02">Não se preocupe, suas novas tarefas irão aparece aqui.</span>
+                </p>
+            </div>
+
+            <!-- Tarefas -->
+            <div class="space none">
+                <input type="checkbox" id="task-completed">
+                <span id="task-name">Nome da tarefa</span>
+                <span id="task-description">Descrição do teste</span>
+                <button id="taks-edit"><span>Editar</span></button>
+                <button id="taks-del"><span>Excluir</span></button>
+                <hr>
+            </div>
+
+            <div class="space">
+                <button id="task-cad" class="button-task">+ Adicionar Nova Tarefa</button>
+            </div>
+
         </div>
-
-        <!-- Paragrafo para quando não tiver Tarefas -->
-        <div class="space" id="task">
-            <p class="text">
-                Você ainda não criou nenhuma <span class="alert01">Tarefa</span>!<br>
-                <span class="alert02">Não se preocupe, suas novas tarefas irão aparece aqui.</span>
-            </p>
-        </div>
-
-        <!-- Tarefas -->
-         <!-- <div class="space">
-            <input type="checkbox" id="task-completed">
-            <span id="task-name">Nome da tarefa</span>
-            <span id="task-description">Descrição do teste</span>
-            <button id="taks-edit"><span>Editar</span></button>
-            <button id="taks-del"><span>Excluir</span></button>
-            <hr>
-         </div> -->
-
-        <div class="space">
-            <button id="task-cad"><img class="button" src="../assets/img/botão.svg" alt="Nova tarefa"></button>
-        </div>
-
-
-
-
-
-
-
-
-
-
-
 
         <!-- === Sidebar de Cadastro === -->
-        <div class="sidebar space">
-            <p class="alert03">Salvar</p>
-            <span class="alert03">Formulário</span>
-            <form class="sidebar-form">
-                <label for="name">Nome:</label>
-                <input type="text" id="name" required>
-
-                <label for="descricao">Descrição (Opcional):</label>
-                <textarea id="descricao" name="descricao" required></textarea>
-
-                <button type="submit">Fecha</button>
-                <button type="submit">Salvar Mudanças</button>
+        <div class="sidebar space" id="taskSidebar">
+            <p class="title-02">Salvar</p>
+            <span class="text">Formulário</span>
+        
+            <form class="sidebar-form" id="task-form-cad">
+                <label class="sidebar-label" for="name_task">Nome:</label>
+                <input class="sidebar-input" type="text" id="name_task" required>
+        
+                <label class="sidebar-label" for="description_task">Descrição (Opcional):</label>
+                <textarea class="sidebar-textarea" id="description_task"></textarea>
+        
+                <div class="colum-buttom">
+                    <button class="sidebar-button01" type="submit">Fecha</button>
+                    <button class="sidebar-button02" type="submit">Cadastrar Tarefa</button>
+                </div>
             </form>
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     </main>
 
@@ -105,6 +88,8 @@
 </body>
 
 <!--=== Link para o script/js ===-->
-<script src="../js/app.js"></script>
 <script src="https://kit.fontawesome.com/42f81b3d44.js" crossorigin="anonymous"></script>
+<script src="../js/index.js"></script>
+<script src="../js/sidebar.js"></script>
+
 </html>

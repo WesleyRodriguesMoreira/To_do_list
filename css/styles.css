@@ -14,6 +14,9 @@
     align-items: center;
     justify-content: center;
 }
+.none{
+    display: none;
+}
 
 /* === Menu === */
 .logo{
@@ -23,15 +26,13 @@
 .text{
     text-align: center;
     font-size: 16px; 
+    margin-top: 0px;
 }
 
 /* === Estrutura da página === */
-.title{
-    margin-top: 5%;
-    /* align-self: flex-start;
-    border-radius: 4px;
-    width: 50%;
-    text-align: left; */
+.task-crud{
+   width: 50%;
+   margin-top: 5%;
 }
 .alert01{
     color: #989898;
@@ -44,14 +45,18 @@
     font-weight: bolder;
 }
 .space{
-    margin-top: 2%;
+    margin-top: 6%;
 }
-.button{
-    width: 80%;
-    border-radius: 3px;
+.button-task{
+    border: 2px dashed #989898;
+    color: #989898;
+    padding: 10px 16px 10px 16px;
+    border-radius: 8px;
+    width: 100%;
 }
-.button:hover {
-    background-color: rgba(255, 255, 255, 0.178); /* Cor do fundo ao passar o mouse */
+.button-task:hover {
+    border: 2px dashed #FFFFFF;
+    color: #fff;
 }
 hr{
     border: 1px solid #989898;

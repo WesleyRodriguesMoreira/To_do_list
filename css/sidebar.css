@@ -1,43 +1,65 @@
 .sidebar {
-    width: 40%;
-    padding: 18% 6% 0% 6%;
-    box-shadow: 20px 0 5px rgba(0, 0, 0, 0.1); /* Altera a sombra para o lado esquerdo */
-    height: 100vh;
+    width: 31%;
+    padding: 18% 10% 0% 10%;
+    box-shadow: -20px 0 100px rgb(0, 0, 0); /* Altera a sombra para o lado esquerdo */
+    height: 100%;
     position: fixed;
     right: 0; /* Fixa a sidebar no lado direito */
+    top: 0;
+    transform: translateX(100%); /* Começa fora da tela à direita */
+    transition: transform 0.3s ease-in-out; /* Animação suave */
+    display: none; /* Esconde o sidebar inicialmente */
 }
-.alert03{
+.sidebar.open {
+    transform: translateX(0); /* Sidebar aparece na tela */
+    display: block; /* Garante que o sidebar esteja visível */
+}
+
+.sidebar.closed {
+    transform: translateX(100%); /* Sidebar se move para fora da tela */
+}
+.title-02{
     color: #989898;
     font-size: 14px;
 }
-
 .sidebar-form {
     display: flex;
     flex-direction: column;
+    margin-top: 10%;
 }
-
-.sidebar label {
-    margin-bottom: 5px;
+.sidebar-label{
+    margin-bottom: 2%;
 }
-
-.sidebar input[type="text"],
-.sidebar textarea {
-    margin-bottom: 15px;
+.sidebar-input, .sidebar-textarea{
+    margin-bottom: 10%;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px groove #9898989d;
+    background-color: #68636360;
     border-radius: 4px;
 }
-
-.sidebar button {
-    padding: 10px;
-    background-color: #28a745;
-    color: white;
+.sidebar-textarea{
+    padding: 10px 10px 70px 10px;
+}
+.colum-buttom{
+    display: flex;
+    justify-content: end;
+}
+.sidebar-button01, .sidebar-button02{   
+    padding: 10px 16px 10px 16px;
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
     cursor: pointer;
 }
-
-.sidebar button:hover {
-    background-color: #218838;
+.sidebar-button01{
+    background-color: #2B2D31;
+}
+.sidebar-button01:hover {
+    background-color: #444444;
+}
+.sidebar-button02{
+    background-color: #1D46CA;
+}
+.sidebar-button02:hover {
+    background-color: #11276E;
 }
 

@@ -1,25 +1,81 @@
-<!DOCTYPE html>  
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sidebar com Formulário</title>
-    <link rel="stylesheet" href="../css/teste.css"> 
+    <link rel="stylesheet" href="../css/teste.css">
+    <title>CRUD com Local Storage</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
 </head>
 <body>
-    <div class="sidebar">
-        <span class="alert03">Salvar</span>
-        <p>Formulário</p>
-        <form>
-            <label for="name">Nome:</label>
-            <input type="text" id="name" required>
+    <h1>Gerenciador de Tarefas</h1>
 
-            <label for="descricao">Descrição (Opcional):</label>
-            <textarea id="descricao" name="descricao" required></textarea>
+    <!-- Formulário -->
+    <form id="taskForm">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" required>
+        <br>
+        <label for="description">Descrição:</label>
+        <input type="text" id="description" required>
+        <br>
+        <button type="submit">Adicionar Tarefa</button>
+    </form>
 
-            <button type="submit">Fecha</button>
-            <button type="submit">Salvar Mudanças</button>
-        </form>
-    </div>
+    <h2>Lista de Tarefas</h2>
+    <table id="taskTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Descrição</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Linhas de tarefas serão inseridas aqui -->
+        </tbody>
+    </table>
+
+    <h1>Fecha sidebar</h1>
+    <!-- Sidebar de Cadastro -->
+<div class="sidebar space" id="taskSidebar">
+    <p class="title-02">Salvar</p>
+    <span class="text">Formulário</span>
+
+    <form class="sidebar-form" id="task-form-cad">
+        <label class="sidebar-label" for="name_task">Nome:</label>
+        <input class="sidebar-input" type="text" id="name_task" required>
+
+        <label class="sidebar-label" for="description_task">Descrição (Opcional):</label>
+        <textarea class="sidebar-textarea" id="description_task"></textarea>
+
+        <div class="colum-buttom">
+            <button class="sidebar-button01" type="submit">Fecha</button>
+            <button class="sidebar-button02" type="submit">Cadastrar Tarefa</button>
+        </div>
+    </form>
+</div>
+
+<div class="space">
+    <button id="task-cad" class="button-task">+ Adicionar Nova Tarefa</button>
+</div>
+
+
+  
 </body>
+
+<script src="../js/crud-teste.js"></script>
+<script src="../js/sidebar-teste.js"></script>
 </html>
