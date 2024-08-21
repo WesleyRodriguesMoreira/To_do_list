@@ -1,11 +1,11 @@
 .sidebar {
-    width: 31%;
-    padding: 18% 10% 0% 10%;
-    box-shadow: -20px 0 100px rgb(0, 0, 0); /* Altera a sombra para o lado esquerdo */
-    height: 100%;
     position: fixed;
-    right: 0; /* Fixa a sidebar no lado direito */
+    right: 0;
     top: 0;
+    width: 48%;
+    height: 100%;
+    box-shadow: -20px 0 100px rgba(0, 0, 0);
+    padding: 20px;
     transform: translateX(100%); /* Começa fora da tela à direita */
     transition: transform 0.3s ease-in-out; /* Animação suave */
     display: none; /* Esconde o sidebar inicialmente */
@@ -14,21 +14,30 @@
     transform: translateX(0); /* Sidebar aparece na tela */
     display: block; /* Garante que o sidebar esteja visível */
 }
-
 .sidebar.closed {
     transform: translateX(100%); /* Sidebar se move para fora da tela */
+}
+.sidebar-div{
+    margin-left: 10%;
+    margin-top: 10%;
+}
+.sidebar-menu{
+    margin-bottom: 10%;
 }
 .title-02{
     color: #989898;
     font-size: 14px;
 }
+.name-task{
+    margin-bottom: 10px;
+}
 .sidebar-form {
     display: flex;
     flex-direction: column;
-    margin-top: 10%;
+    justify-content: center;
 }
 .sidebar-label{
-    margin-bottom: 2%;
+    margin-bottom: 1%;
 }
 .sidebar-input, .sidebar-textarea{
     margin-bottom: 10%;

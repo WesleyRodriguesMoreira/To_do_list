@@ -6,20 +6,16 @@
     <!--=== Links de Estilos ===-->
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/sidebar.css">
-    
     <title>To-do List</title>
 </head>
 <body>
-
     <!--=== Menu ===-->
     <header class="container">
         <figure>
             <img class="logo" src="../assets/img/Logo.svg" alt="Logo do Projeto">
-            <!-- <figcaption class="text">Sistema de Geração de Tarefas.</figcaption> -->
         </figure>
     </header>
 
-   
     <!--=== Estrutura da página ===-->
     <main class="container">
         <div class="task-crud">
@@ -30,7 +26,6 @@
                 <hr>
             </div>
         
-
             <!-- Paragrafo para quando não tiver Tarefas -->
             <div class="space" id="task-p">
                 <p class="text">
@@ -38,6 +33,36 @@
                     <span class="alert02">Não se preocupe, suas novas tarefas irão aparece aqui.</span>
                 </p>
             </div>
+
+            <style>
+                table {
+                    width: 100%;
+                    border-collapse: collapse;
+                }
+                table, th, td {
+                    border: 1px solid black;
+                }
+                th, td {
+                    padding: 8px;
+                    text-align: left;
+                }
+            </style>
+
+            <!-- Tarefas teste -->
+            <h2>Lista de Tarefas</h2>
+            <table id="taskTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Descrição</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Linhas de tarefas serão inseridas aqui -->
+                </tbody>
+            </table>
 
             <!-- Tarefas -->
             <div class="space none">
@@ -56,40 +81,54 @@
         </div>
 
         <!-- === Sidebar de Cadastro === -->
-        <div class="sidebar space" id="taskSidebar">
-            <p class="title-02">Salvar</p>
-            <span class="text">Formulário</span>
-        
-            <form class="sidebar-form" id="task-form-cad">
-                <label class="sidebar-label" for="name_task">Nome:</label>
-                <input class="sidebar-input" type="text" id="name_task" required>
-        
-                <label class="sidebar-label" for="description_task">Descrição (Opcional):</label>
-                <textarea class="sidebar-textarea" id="description_task"></textarea>
-        
-                <div class="colum-buttom">
-                    <button class="sidebar-button01" type="submit">Fecha</button>
-                    <button class="sidebar-button02" type="submit">Cadastrar Tarefa</button>
+        <div class="sidebar" id="taskSidebar">
+            <div class="sidebar-div">
+                <div class="sidebar-menu">
+                    <p class="title-02">Salvar</p>
+                    <span class="name-task text">Nome não definido</span>
                 </div>
-            </form>
+            
+                <form class="sidebar-form" id="task-form-cad">
+                    <label class="sidebar-label" for="name_task">Nome:</label>
+                    <input class="sidebar-input" type="text" id="name_task" placeholder="Digite o nome da tarefa" required>
+            
+                    <label class="sidebar-label" for="description_task">Descrição (Opcional):</label>
+                    <textarea class="sidebar-textarea" id="description_task" placeholder="Digite a descrição da tarefa"></textarea>
+            
+                    <div class="colum-buttom">
+                        <button id="task-cad" class="sidebar-button01">Fecha</button>
+                        <button class="sidebar-button02" type="submit">Cadastrar Tarefa</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+         <!-- === Sidebar de Edição === -->
+        <div class="sidebar" id="taskSidebar">
+            <div class="sidebar-div">
+                <p class="title-02">Salvar</p>
+                <span class="name-task text">Formulário</span>
+            
+                <form class="sidebar-form" id="task-form-cad">
+                    <label class="sidebar-label" for="name_task">Nome:</label>
+                    <input class="sidebar-input" type="text" id="name_task">
+            
+                    <label class="sidebar-label" for="description_task">Descrição (Opcional):</label>
+                    <textarea class="sidebar-textarea" id="description_task"></textarea>
+            
+                    <div class="colum-buttom">
+                        <button id="task-cad" class="sidebar-button01">Fecha</button>
+                        <button class="sidebar-button02" type="submit">Cadastrar Tarefa</button>
+                    </div>
+                </form>
+            </div>
         </div>
 
     </main>
-
-    
-
-    <!-- === Sidebar de Edição === -->
-
-    <!--=== Rodapé da página ===-->
-    <!-- <footer class="container">
-        <p>&copy; 2024 Meu Site. Todos os direitos reservados.</p>
-    </footer> -->
-    
 </body>
 
 <!--=== Link para o script/js ===-->
 <script src="https://kit.fontawesome.com/42f81b3d44.js" crossorigin="anonymous"></script>
 <script src="../js/index.js"></script>
 <script src="../js/sidebar.js"></script>
-
 </html>
