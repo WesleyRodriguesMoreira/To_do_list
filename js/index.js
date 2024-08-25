@@ -1,6 +1,7 @@
 // Referências aos elementos
 const taskForm = document.getElementById('task-form-cad');
 const taskTableBody = document.getElementById('taskTable').querySelector('tbody');
+const taskMessage = document.getElementById('task-p'); 
 
 // Carrega tarefas ao iniciar
 document.addEventListener('DOMContentLoaded', loadTasks);
@@ -15,7 +16,15 @@ taskForm.addEventListener('submit', function(event) {
 function loadTasks() {
     const tasks = getTasks();
     taskTableBody.innerHTML = '';
-    tasks.forEach(task => insertTaskIntoTable(task));
+
+    if(tasks.length === 0){
+        taskMessage.style.display = 'block';
+        document.querySelector('.select-taks').style.display = 'none';
+    }else{
+        taskMessage.style.display = 'none';
+        document.querySelector('.select-taks').style.display = 'block';
+        tasks.forEach(task => insertTaskIntoTable(task));
+    }
 }
 
 // Função para obter tarefas do localStorage
@@ -24,12 +33,12 @@ function getTasks() {
     return tasks ? JSON.parse(tasks) : [];
 }
 
-// Função para salvar tarefas no localStorage
+// Função para cadastra tarefas no localStorage
 function saveTasks(tasks) {
     localStorage.setItem('tasks', JSON.stringify(tasks));
 }
 
-// Função para adicionar uma tarefa
+// === Função para adicionar uma tarefa ===
 function addTask() {
     const name = document.getElementById('name_task').value;
     const description = document.getElementById('description_task').value;
@@ -42,11 +51,14 @@ function addTask() {
     saveTasks(tasks);
     insertTaskIntoTable(task);
     
+    // Atualiza a exibição após adicionar uma tarefa
+    loadTasks();
+
     // Limpar o formulário
     taskForm.reset();
 }
 
-// Função para inserir uma tarefa na tabela
+// === Função para inserir uma tarefa na tabela ===
 function insertTaskIntoTable(task) {
     const row = taskTableBody.insertRow();
     row.innerHTML = `
@@ -60,15 +72,7 @@ function insertTaskIntoTable(task) {
     `;
 }
 
-// Função para excluir uma tarefa
-function deleteTask(id) {
-    let tasks = getTasks();
-    tasks = tasks.filter(task => task.id !== id);
-    saveTasks(tasks);
-    loadTasks();
-}
-
-// Função para editar uma tarefa
+// === Função para editar uma tarefa ===
 function editTask(id) {
     const tasks = getTasks();
     const task = tasks.find(task => task.id === id);
@@ -79,11 +83,16 @@ function editTask(id) {
     deleteTask(id); // Remove a tarefa antiga para evitar duplicação
 }
 
-// Limpar as tarefas ao iniciar
-function clearTasks() {
-    localStorage.removeItem('tasks');
-    loadTasks();
+// === Função para excluir uma tarefa ===
+function deleteTask(id) {
+
+    const confirmation = confirm("Tem certeza que deseja excluir esta tarefa?");
+    
+    if(confirmation){ 
+        let tasks = getTasks();
+        tasks = tasks.filter(task => task.id !== id);
+        saveTasks(tasks);
+        loadTasks();
+    } 
+    
 }
-
-
-

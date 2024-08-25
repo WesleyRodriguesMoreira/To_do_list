@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--=== Links de Estilos ===-->
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/sidebar.css">
-    <title>To-do List</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="../assets/img/Logo.svg" type="image/x-icon">
+        <!--=== Links de Estilos ===-->
+        <link rel="stylesheet" href="../css/styles.css">
+        <link rel="stylesheet" href="../css/sidebar.css">
+        <title>To-do List</title>
+    </head>
 <body>
     <!--=== Menu ===-->
     <header class="container">
@@ -34,48 +35,26 @@
                 </p>
             </div>
 
-            <style>
-                table {
-                    width: 100%;
-                    border-collapse: collapse;
-                }
-                table, th, td {
-                    border: 1px solid black;
-                }
-                th, td {
-                    padding: 8px;
-                    text-align: left;
-                }
-            </style>
-
-            <!-- Tarefas teste -->
-            <h2>Lista de Tarefas</h2>
-            <table id="taskTable">
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Nome</th>
-                        <th>Descrição</th>
-                        <th>Ações</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- Linhas de tarefas serão inseridas aqui -->
-                </tbody>
-            </table>
-
-            <!-- Tarefas -->
-            <div class="space none">
-                <input type="checkbox" id="task-completed">
-                <span id="task-name">Nome da tarefa</span>
-                <span id="task-description">Descrição do teste</span>
-                <button id="taks-edit"><span>Editar</span></button>
-                <button id="taks-del"><span>Excluir</span></button>
-                <hr>
+            <!-- Lista de tarefas -->
+            <div class="select-taks">
+                <h2>Lista de Tarefas</h2>
+                <table id="taskTable">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nome</th>
+                            <th>Descrição</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Linhas de tarefas serão exibidas aqui -->
+                    </tbody>
+                </table>
             </div>
 
             <div class="space">
-                <button id="task-cad" class="button-task">+ Adicionar Nova Tarefa</button>
+                <button id="open-sidebar" class="button-task">+ Adicionar Nova Tarefa</button>
             </div>
 
         </div>
@@ -83,9 +62,9 @@
         <!-- === Sidebar de Cadastro === -->
         <div class="sidebar" id="taskSidebar">
             <div class="sidebar-div">
+
                 <div class="sidebar-menu">
-                    <p class="title-02">Salvar</p>
-                    <span class="name-task text">Nome não definido</span>
+                    <p class="title-02">Cadastro de Tarefas</p>
                 </div>
             
                 <form class="sidebar-form" id="task-form-cad">
@@ -96,39 +75,44 @@
                     <textarea class="sidebar-textarea" id="description_task" placeholder="Digite a descrição da tarefa"></textarea>
             
                     <div class="colum-buttom">
-                        <button id="task-cad" class="sidebar-button01">Fecha</button>
+                        <input type="button" value="Fecha Teste" class="sidebar-button01" id="close-sidebar">
                         <button class="sidebar-button02" type="submit">Cadastrar Tarefa</button>
                     </div>
                 </form>
+
             </div>
         </div>
 
-         <!-- === Sidebar de Edição === -->
+        <!-- Sidebar de Edição -->
         <div class="sidebar" id="taskSidebar">
             <div class="sidebar-div">
-                <p class="title-02">Salvar</p>
-                <span class="name-task text">Formulário</span>
+
+                <div class="sidebar-menu">
+                    <p class="title-02">Salvar</p>
+                    <span class="name-task text" id="name_task-edit">Formulário</span>
+                </div>
             
                 <form class="sidebar-form" id="task-form-cad">
-                    <label class="sidebar-label" for="name_task">Nome:</label>
-                    <input class="sidebar-input" type="text" id="name_task">
+                    <label class="sidebar-label" for="name_task-edit">Nome:</label>
+                    <input class="sidebar-input" type="text" id="name_task-edit">
             
-                    <label class="sidebar-label" for="description_task">Descrição (Opcional):</label>
-                    <textarea class="sidebar-textarea" id="description_task"></textarea>
+                    <label class="sidebar-label" for="description_task-edit">Descrição (Opcional):</label>
+                    <textarea class="sidebar-textarea" id="description_task-edit"></textarea>
             
                     <div class="colum-buttom">
-                        <button id="task-cad" class="sidebar-button01">Fecha</button>
-                        <button class="sidebar-button02" type="submit">Cadastrar Tarefa</button>
+                        <input type="button" class="sidebar-button01" id="close-sidebar" value="Fechar">
+                        <button class="sidebar-button02" type="submit">Salvar Tarefa</button>
                     </div>
                 </form>
+
             </div>
         </div>
 
     </main>
 </body>
 
-<!--=== Link para o script/js ===-->
-<script src="https://kit.fontawesome.com/42f81b3d44.js" crossorigin="anonymous"></script>
-<script src="../js/index.js"></script>
-<script src="../js/sidebar.js"></script>
+    <!--=== Link para o script/js ===-->
+    <script src="https://kit.fontawesome.com/42f81b3d44.js" crossorigin="anonymous"></script>
+    <script src="../js/index.js"></script>
+    <script src="../js/sidebar.js"></script>
 </html>

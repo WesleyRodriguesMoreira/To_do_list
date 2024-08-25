@@ -79,11 +79,7 @@ function editTask(id) {
     deleteTask(id); // Remove a tarefa antiga para evitar duplicação
 }
 
-// Limpar as tarefas ao iniciar
-function clearTasks() {
-    localStorage.removeItem('tasks');
-    loadTasks();
-}
+
 
 
 

@@ -2,21 +2,73 @@
     position: fixed;
     right: 0;
     top: 0;
-    width: 300px;
+    width: 48%;
     height: 100%;
-    background-color: #f4f4f4;
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    box-shadow: -20px 0 100px rgba(0, 0, 0);
     padding: 20px;
     transform: translateX(100%); /* Começa fora da tela à direita */
     transition: transform 0.3s ease-in-out; /* Animação suave */
     display: none; /* Esconde o sidebar inicialmente */
 }
-
 .sidebar.open {
     transform: translateX(0); /* Sidebar aparece na tela */
     display: block; /* Garante que o sidebar esteja visível */
 }
-
 .sidebar.closed {
     transform: translateX(100%); /* Sidebar se move para fora da tela */
 }
+.sidebar-div{
+    margin-left: 10%;
+    margin-top: 10%;
+}
+.sidebar-menu{
+    margin-bottom: 10%;
+}
+.title-02{
+    color: #989898;
+    font-size: 14px;
+}
+.name-task{
+    margin-bottom: 10px;
+}
+.sidebar-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.sidebar-label{
+    margin-bottom: 1%;
+}
+.sidebar-input, .sidebar-textarea{
+    margin-bottom: 10%;
+    padding: 10px;
+    border: 1px groove #9898989d;
+    background-color: #68636360;
+    border-radius: 4px;
+}
+.sidebar-textarea{
+    padding: 10px 10px 70px 10px;
+}
+.colum-buttom{
+    display: flex;
+    justify-content: end;
+}
+.sidebar-button01, .sidebar-button02{   
+    padding: 10px 16px 10px 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.sidebar-button01{
+    background-color: #2B2D31;
+}
+.sidebar-button01:hover {
+    background-color: #444444;
+}
+.sidebar-button02{
+    background-color: #1D46CA;
+}
+.sidebar-button02:hover {
+    background-color: #11276E;
+}
+

@@ -1,8 +1,8 @@
-
-// === Abrir Sidebar ===
+// === Abrir e Fecha Sidebar ===
 
 // Referência ao botão e ao sidebar
-const taskButton = document.getElementById('task-cad');
+const taskButton = document.getElementById('open-sidebar');
+const closeSidebarButton = document.getElementById('close-sidebar');
 const taskSidebar = document.getElementById('taskSidebar');
 
 // Função para abrir/fechar o sidebar com animação suave
@@ -25,3 +25,4 @@ function toggleSidebar() {
 
 // Evento de clique no botão para abrir/fechar o sidebar
 taskButton.addEventListener('click', toggleSidebar);
+closeSidebarButton.addEventListener('click', toggleSidebar);
